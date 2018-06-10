@@ -1,0 +1,37 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: newretail-distributeId
+  #database-db(spring boot default init dataSource)
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.100.100.105:3306/TicketDB?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=round
+    username: hno2o
+    password: hno2o
+    filters: stat
+    maxActive: 500
+    initialSize: 2
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 1
+    testWhileIdle: true
+    testOnBorrow: false
+    maxOpenPreparedStatements: 4
+    removeAbandoned: true
+    removeAbandonedTimeout: 1800
+    logAbandoned: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.100.100.107:8081/eureka/
+
+
+
+#log
+logging:
+  config: classpath:log4j2.xml
