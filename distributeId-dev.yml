@@ -2,8 +2,6 @@ server:
   port: 9000
 
 spring:
-  application:
-    name: newretail-distributeId
   #database-db(spring boot default init dataSource)
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -25,12 +23,6 @@ spring:
     removeAbandoned: true
     removeAbandonedTimeout: 1800
     logAbandoned: true
-eureka:
-  client:
-    service-url:
-      defaultZone: http://192.100.100.107:8081/eureka/
-
-
 
 #log
 logging:
