@@ -1,0 +1,7 @@
+server:
+  port: 8083
+zuul:
+  routes:
+    distribute:
+      path: /idworker/**
+      serviceId: newretail-distributeId
