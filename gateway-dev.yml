@@ -1,7 +1,37 @@
-server:
-  port: 8083
 zuul:
+  ribbon-isolation-strategy: thread
+  retryable: true
   routes:
-    distribute:
+    idworker:
+      strip-prefix: false
       path: /idworker/**
       serviceId: newretail-distributeId
+
+
+ribbon:
+  connectTimeout: 5000
+  readTimeout: 50000
+  maxAutoRetries: 1
+  maxAutoRetriesNextServer: 3
+  okToRetryOnAllOperations: true
+
+
+hystrix:
+  threadpool:
+    default:
+      coreSize: 3
+      maximumSize: 30
+      maxQueueSize: 500
+      queueSizeRejectionThreshold: 20
+    #hystrix的超时时间必须大于ribbon的超时时间
+    command:
+      default:
+        execution:
+          isolation:
+            thread:
+              timeoutInMilliseconds: 60000
+#log
+logging:
+  config: classpath:log4j2.xml
+server:
+  port: 8083
