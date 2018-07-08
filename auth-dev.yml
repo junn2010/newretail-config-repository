@@ -39,3 +39,8 @@ redis:
       minIdle: 0
       maxIdle: 100
 
+feign:
+  hystrix:
+    enabled: true
+
+
