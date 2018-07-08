@@ -26,7 +26,7 @@ spring:
 
 mybatis:
   mapperLocations: classpath*:com/junn/newretail/auth/**/mapping/*Mapper.xml
-  configLocation: classpath:fileserver-mybatis-config.xml
+  configLocation: classpath:mybatis-config.xml
 
 #database-redis
 redis:
