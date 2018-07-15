@@ -5,8 +5,11 @@ zuul:
     idworker:
       strip-prefix: false
       path: /idworker/**
-      serviceId: newretail-distributeId
-
+      serviceId: newretail-distributeid
+    auth:
+      strip-prefix: false
+      path: /auth/**
+      serviceId: newretail-auth
 
 ribbon:
   connectTimeout: 5000
@@ -14,8 +17,7 @@ ribbon:
   maxAutoRetries: 1
   maxAutoRetriesNextServer: 3
   okToRetryOnAllOperations: true
-
-
+      
 hystrix:
   threadpool:
     default:

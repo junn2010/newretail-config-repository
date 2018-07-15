@@ -42,5 +42,8 @@ redis:
 feign:
   hystrix:
     enabled: true
-
+#ribbon rule    
+newretail-distributeId: 
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 
