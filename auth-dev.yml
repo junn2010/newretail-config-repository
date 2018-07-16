@@ -6,7 +6,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.100.100.105:3306/newretail?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=round
+    url: jdbc:mysql://192.100.100.105:3306/newretaildb?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=round
     username: hno2o
     password: hno2o
     filters: stat
