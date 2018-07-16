@@ -46,4 +46,13 @@ feign:
 newretail-distributeId: 
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+jwt:
+  authUser:
+    priKey: MIIBVgIBADANBgkqhkiG9w0BAQEFAASCAUAwggE8AgEAAkEAuD4fne+8tserhGaxxxy4Ud8qYUQy07ZoSy/FEPpMLhi5TkjxKUNK0AfaOV+/bmyfsr98txkenc+LCV3vKJP9KwIDAQABAkEAkFyk+2R4cqNbIkAxNjmrtwLsuw/r33WCnL8OY3IrtMV1slTF0qPuRVaMyaEWtOoZtca8U6r4YLhRTs5rOWTgoQIhAPVofuBfkD+YBh2Y6+ZsTCYHFGyEWCTClfDKbOkh3UbxAiEAwDHQES3+rRwnomnGP3xunyaRiwOXZ0Pl2CrpdKkvHdsCIH3ldrl6rRDC19hVPCgAxOv5U9P77RAmty9JWagcFF2xAiEAkDkRFMM6GHdHOrY7IUrjzCPqFbJFPCWUZcmV1Ihcpf8CIQDMA26YDBF3/tzLMHfrAodzLK17l0Ro6p2bu2FlIkFnpg==
+    pubKey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALg+H53vvLbHq4RmscccuFHfKmFEMtO2aEsvxRD6TC4YuU5I8SlDStAH2jlfv25sn7K/fLcZHp3Piwld7yiT/SsCAwEAAQ==
+    expire: 14400
+#图片验证有效期限
+code:
+  images:
+    expire: 300
 
