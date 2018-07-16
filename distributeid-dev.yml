@@ -31,7 +31,7 @@ management:
     web:
       base-path: /actuator
       exposure:
-        include: *
+        include: "*"
   endpoint:
         health:
           show-details: always
