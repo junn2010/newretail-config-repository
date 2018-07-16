@@ -24,6 +24,14 @@ spring:
     removeAbandonedTimeout: 1800
     logAbandoned: true
 
-#log
-logging:
-  config: classpath:log4j2.xml
+management:
+  server:
+    port: 7001
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: *
+  endpoint:
+        health:
+          show-details: always
