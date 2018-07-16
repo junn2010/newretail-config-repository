@@ -24,6 +24,7 @@ spring:
     removeAbandonedTimeout: 1800
     logAbandoned: true
 
+#actuator
 management:
   server:
     port: 7001
@@ -31,7 +32,15 @@ management:
     web:
       base-path: /actuator
       exposure:
-        include: "*"
+        include: info, health,shutdown
   endpoint:
-        health:
-          show-details: always
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
+security:
+  user:
+    username: admin
+    password: admin
+    role: ENDPOINT_ADMIN
+
