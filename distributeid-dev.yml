@@ -31,8 +31,6 @@ spring:
       roles: ENDPOINT_ADMIN
 #actuator
 management:
-  server:
-    port: 7001
   endpoints:
     web:
       base-path: /actuator
