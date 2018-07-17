@@ -8,7 +8,7 @@ zuul:
       serviceId: newretail-distributeid
     auth:
       strip-prefix: false
-      path: /api/auth/**
+      path: /auth/**
       serviceId: newretail-auth
 
 ribbon:
