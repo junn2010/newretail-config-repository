@@ -33,4 +33,4 @@ hystrix:
             thread:
               timeoutInMilliseconds: 60000
 server:
-  port: 80
+  port: 8083
