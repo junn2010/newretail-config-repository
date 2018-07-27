@@ -26,6 +26,8 @@ spring:
 
 mybatis:
   mapperLocations: classpath*:com/junn/newretail/auth/**/mapping/*Mapper.xml
+  #plug ComponentScan
+  plugComponentScan: com.junn.newretail.auth
   configLocation: classpath:mybatis-config.xml
 
 #database-redis
