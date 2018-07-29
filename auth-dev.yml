@@ -40,6 +40,7 @@ redis:
       maxWaitMillis: 1000
       minIdle: 0
       maxIdle: 100
+      maxTotal: 1000
 
 feign:
   hystrix:
