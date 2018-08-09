@@ -1,5 +1,5 @@
 zuul:
-  #ribbon-isolation-strategy: thread
+  ribbon-isolation-strategy: thread
   retryable: true
   routes:
     auth:
@@ -10,7 +10,7 @@ zuul:
 ribbon:
   connectTimeout: 6000
   readTimeout: 50000
-  maxAutoRetries: 0
+  maxAutoRetries: 1
   maxAutoRetriesNextServer: 2
   okToRetryOnAllOperations: true
       
