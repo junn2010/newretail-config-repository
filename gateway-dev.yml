@@ -1,6 +1,6 @@
 zuul:
-  ribbon-isolation-strategy: thread
-  retryable: false
+  #ribbon-isolation-strategy: thread
+  retryable: true
   routes:
     auth:
       strip-prefix: false
