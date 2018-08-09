@@ -10,7 +10,7 @@ zuul:
 ribbon:
   connectTimeout: 6000
   readTimeout: 50000
-  maxAutoRetries: 1
+  maxAutoRetries: 0
   maxAutoRetriesNextServer: 2
   okToRetryOnAllOperations: true
       
