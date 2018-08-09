@@ -3,7 +3,7 @@ zuul:
   retryable: true
   routes:
     auth:
-      strip-prefix: false
+      #strip-prefix: false
       path: /auth/**
       serviceId: newretail-auth
 
@@ -12,7 +12,7 @@ ribbon:
   readTimeout: 50000
   maxAutoRetries: 1
   maxAutoRetriesNextServer: 3
-  okToRetryOnAllOperations: false
+  okToRetryOnAllOperations: true
       
 hystrix:
   threadpool:
