@@ -2,10 +2,6 @@ zuul:
   ribbon-isolation-strategy: thread
   retryable: true
   routes:
-    idworker:
-      strip-prefix: false
-      path: /idworker/**
-      serviceId: newretail-distributeid
     auth:
       strip-prefix: false
       path: /auth/**
@@ -16,7 +12,7 @@ ribbon:
   readTimeout: 50000
   maxAutoRetries: 1
   maxAutoRetriesNextServer: 3
-  okToRetryOnAllOperations: true
+  okToRetryOnAllOperations: false
       
 hystrix:
   threadpool:
