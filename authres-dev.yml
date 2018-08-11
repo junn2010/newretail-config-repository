@@ -43,7 +43,9 @@ management:
       enabled: true
 
 mybatis:
-  mapperLocations: classpath*:com/junn/newretail/auth/**/mapping/*Mapper.xml
+  mapperLocations: classpath*:com/junn/newretail/authres/**/mapping/*Mapper.xml
+  #plug ComponentScan
+  plugComponentScan: com.junn.newretail.authres
   configLocation: classpath:mybatis-config.xml
 
 #database-redis
