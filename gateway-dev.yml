@@ -6,6 +6,10 @@ zuul:
       strip-prefix: false
       path: /auth/**
       serviceId: newretail-auth
+    member:
+      strip-prefix: false
+      path: /member/**
+      serviceId: newretail-member
 
 ribbon:
   connectTimeout: 6000
