@@ -1,5 +1,5 @@
 server:
-  port: 9001
+  port: 9002
 
 spring:
   #database-db(spring boot default init dataSource)
@@ -69,8 +69,8 @@ newretail-distributeId:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 jwt:
   authUser:
-    priKey: MIIBVgIBADANBgkqhkiG9w0BAQEFAASCAUAwggE8AgEAAkEAuD4fne+8tserhGaxxxy4Ud8qYUQy07ZoSy/FEPpMLhi5TkjxKUNK0AfaOV+/bmyfsr98txkenc+LCV3vKJP9KwIDAQABAkEAkFyk+2R4cqNbIkAxNjmrtwLsuw/r33WCnL8OY3IrtMV1slTF0qPuRVaMyaEWtOoZtca8U6r4YLhRTs5rOWTgoQIhAPVofuBfkD+YBh2Y6+ZsTCYHFGyEWCTClfDKbOkh3UbxAiEAwDHQES3+rRwnomnGP3xunyaRiwOXZ0Pl2CrpdKkvHdsCIH3ldrl6rRDC19hVPCgAxOv5U9P77RAmty9JWagcFF2xAiEAkDkRFMM6GHdHOrY7IUrjzCPqFbJFPCWUZcmV1Ihcpf8CIQDMA26YDBF3/tzLMHfrAodzLK17l0Ro6p2bu2FlIkFnpg==
-    pubKey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALg+H53vvLbHq4RmscccuFHfKmFEMtO2aEsvxRD6TC4YuU5I8SlDStAH2jlfv25sn7K/fLcZHp3Piwld7yiT/SsCAwEAAQ==
+    priKey: MIIBUwIBADANBgkqhkiG9w0BAQEFAASCAT0wggE5AgEAAkEAyI99tT8CeG6FnI7EgmwJxJD0W3Wom1RiK+r25xqGqUujYEtZXKxgI8P8XUrmfe2viEHQfGZ5bIxjkXDpA79yDQIDAQABAkBoFF7uIebMTL61wjkkXaCsC3VjySlYgm/3zpWW1OMxEw5lAR9mI0QTuxub3gNO/lfGk4GwhMsda7ofx4dO4dwZAiEA474dJ7IEhlKlIsDZ5SgxNx3FsUg9zWhnxXWEd1OOGscCIQDhcfrbAQhkoD65pK3UyAgkncP5eixZFHSmc/MDwgnYiwIgDxMcdu4vonyB9cTyJ1r7tvw/g7aWcKxCgi1/MS7Ury0CIDEi8pYBJ58m/gTgS7Lw1jWE3U3mvvu7ZaFR7EmJZTP5AiBxoS/bnXNCriCViNa71kM71+cLFwbLofDK1D8riBQYDA==
+    pubKey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMiPfbU/AnhuhZyOxIJsCcSQ9Ft1qJtUYivq9ucahqlLo2BLWVysYCPD/F1K5n3tr4hB0HxmeWyMY5Fw6QO/cg0CAwEAAQ==
     expire: 14400
 #图片验证有效期限
 code:
