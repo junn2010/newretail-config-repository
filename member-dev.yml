@@ -23,6 +23,11 @@ spring:
     removeAbandoned: true
     removeAbandonedTimeout: 1800
     logAbandoned: true
+#rockqm
+  rocketmq:
+    name-server: 192.100.100.107:9876
+    producer:
+      group: memberGroup
 #actuator user
   security:
     user:
