@@ -23,6 +23,8 @@ spring:
     removeAbandoned: true
     removeAbandonedTimeout: 1800
     logAbandoned: true
+  rocketmq:
+      nameServer: 192.100.100.107:9876
 #actuator user
   security:
     user:
