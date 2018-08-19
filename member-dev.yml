@@ -27,7 +27,7 @@ spring:
   rocketmq:
     nameServer: 192.100.100.107:9876
     producer:
-      group: memberGroup
+      group: ${spring.application.name}
 #actuator user
   security:
     user:
