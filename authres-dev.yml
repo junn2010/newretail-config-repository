@@ -1,5 +1,5 @@
 server:
-  port: 9002
+  port: 9003
 
 spring:
   #database-db(spring boot default init dataSource)
@@ -23,24 +23,18 @@ spring:
     removeAbandoned: true
     removeAbandonedTimeout: 1800
     logAbandoned: true
-#actuator user
-  security:
-    user:
-      name: admin
-      password: admin
-      roles: ENDPOINT_ADMIN
 #actuator
 management:
   endpoints:
     web:
       base-path: /actuator
       exposure:
-        include: info, health,shutdown
+        include: info, health
   endpoint:
     health:
       show-details: always
     shutdown:
-      enabled: true
+      enabled: false
 
 mybatis:
   mapperLocations: classpath*:com/junn/newretail/authres/**/mapping/*Mapper.xml

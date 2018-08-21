@@ -1,5 +1,5 @@
 server:
-  port: 9002
+  port: 9005
 
 spring:
   #database-db(spring boot default init dataSource)
@@ -23,8 +23,7 @@ spring:
     removeAbandoned: true
     removeAbandonedTimeout: 1800
     logAbandoned: true
-  rocketmq:
-      nameServer: 192.100.100.107:9876
+
 #actuator
 management:
   endpoints:
@@ -39,9 +38,9 @@ management:
       enabled: false
 
 mybatis:
-  mapperLocations: classpath*:com/junn/newretail/auth/**/mapping/*Mapper.xml
+  mapperLocations: classpath*:com/junn/newretail/fileserv/**/mapping/*Mapper.xml
   #plug ComponentScan
-  plugComponentScan: com.junn.newretail.auth
+  plugComponentScan: com.junn.newretail.fileserv
   configLocation: classpath:mybatis-config.xml
 
 #database-redis
@@ -54,7 +53,6 @@ redis:
       maxWaitMillis: 1000
       minIdle: 0
       maxIdle: 100
-      maxTotal: 1000
 
 feign:
   hystrix:
@@ -63,13 +61,16 @@ feign:
 newretail-distributeId: 
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
-jwt:
-  authUser:
-    priKey: MIIBUwIBADANBgkqhkiG9w0BAQEFAASCAT0wggE5AgEAAkEAyI99tT8CeG6FnI7EgmwJxJD0W3Wom1RiK+r25xqGqUujYEtZXKxgI8P8XUrmfe2viEHQfGZ5bIxjkXDpA79yDQIDAQABAkBoFF7uIebMTL61wjkkXaCsC3VjySlYgm/3zpWW1OMxEw5lAR9mI0QTuxub3gNO/lfGk4GwhMsda7ofx4dO4dwZAiEA474dJ7IEhlKlIsDZ5SgxNx3FsUg9zWhnxXWEd1OOGscCIQDhcfrbAQhkoD65pK3UyAgkncP5eixZFHSmc/MDwgnYiwIgDxMcdu4vonyB9cTyJ1r7tvw/g7aWcKxCgi1/MS7Ury0CIDEi8pYBJ58m/gTgS7Lw1jWE3U3mvvu7ZaFR7EmJZTP5AiBxoS/bnXNCriCViNa71kM71+cLFwbLofDK1D8riBQYDA==
-    pubKey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMiPfbU/AnhuhZyOxIJsCcSQ9Ft1qJtUYivq9ucahqlLo2BLWVysYCPD/F1K5n3tr4hB0HxmeWyMY5Fw6QO/cg0CAwEAAQ==
-    expire: 14400
-#图片验证有效期限
-code:
-  images:
-    expire: 300
+
+#缓存
+CacheAspectJ:
+  isCacheEnable: true
+
+#Fastfdclient
+StorageClient:
+  Poolconfig:
+    maxWaitMillis: 3000
+    minIdle: 0
+    maxIdle: 8
+    maxTotal: 50
 
