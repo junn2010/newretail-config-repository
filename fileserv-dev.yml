@@ -70,7 +70,7 @@ CacheAspectJ:
 
 #Fastfdclient
 StorageClient:
-  Poolconfig:
+  PoolConfig:
     maxWaitMillis: 3000
     minIdle: 0
     maxIdle: 8
