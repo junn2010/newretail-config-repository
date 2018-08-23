@@ -10,6 +10,10 @@ zuul:
       strip-prefix: false
       path: /member/**
       serviceId: newretail-member
+    fileserv:
+      strip-prefix: false
+      path: /fileserv/**
+      serviceId: newretail-fileserv
 
 ribbon:
   connectTimeout: 6000
