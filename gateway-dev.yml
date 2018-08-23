@@ -36,5 +36,10 @@ hystrix:
           isolation:
             thread:
               timeoutInMilliseconds: 60000
+multipart:
+  enabled: true
+  maxFileSize: 20Mb
+  maxRequestSize: 20Mb
+                  
 server:
   port: 8083

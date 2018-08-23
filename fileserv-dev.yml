@@ -23,6 +23,10 @@ spring:
     removeAbandoned: true
     removeAbandonedTimeout: 1800
     logAbandoned: true
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 50MB
 
 #actuator
 management:
@@ -76,9 +80,3 @@ StorageClient:
     maxIdle: 8
     maxTotal: 50
 
-
-#fileupload
-multipart:
-  enabled: true
-  maxFileSize: 20Mb
-  maxRequestSize: 20Mb
