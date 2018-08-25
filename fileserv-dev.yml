@@ -67,6 +67,21 @@ feign:
 newretail-distributeId: 
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+hystrix:
+  threadpool:
+    default:
+      coreSize: 3
+      maximumSize: 30
+      maxQueueSize: 500
+      queueSizeRejectionThreshold: 20
+    #hystrix的超时时间必须大于ribbon的超时时间
+    command:
+      default:
+        execution:
+          isolation:
+            thread:
+              timeoutInMilliseconds: 60000
+
 
 #缓存
 CacheAspectJ:
@@ -80,3 +95,9 @@ StorageClient:
     maxIdle: 8
     maxTotal: 50
 
+
+#fileupload
+multipart:
+  enabled: true
+  maxFileSize: 20Mb
+  maxRequestSize: 20Mb

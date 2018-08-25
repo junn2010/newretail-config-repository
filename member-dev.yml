@@ -1,5 +1,5 @@
 server:
-  port: 9003
+  port: 9004
 
 spring:
   #database-db(spring boot default init dataSource)
@@ -28,24 +28,18 @@ spring:
     nameServer: 192.100.100.107:9876
     producer:
       group: ${spring.application.name}
-#actuator user
-  security:
-    user:
-      name: admin
-      password: admin
-      roles: ENDPOINT_ADMIN
 #actuator
 management:
   endpoints:
     web:
       base-path: /actuator
       exposure:
-        include: info, health,shutdown
+        include: info, health
   endpoint:
     health:
       show-details: always
     shutdown:
-      enabled: true
+      enabled: false
 
 mybatis:
   mapperLocations: classpath*:com/junn/newretail/member/**/mapping/*Mapper.xml
@@ -74,3 +68,17 @@ newretail-distributeId:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 
 
+hystrix:
+  threadpool:
+    default:
+      coreSize: 3
+      maximumSize: 30
+      maxQueueSize: 500
+      queueSizeRejectionThreshold: 20
+    #hystrix的超时时间必须大于ribbon的超时时间
+    command:
+      default:
+        execution:
+          isolation:
+            thread:
+              timeoutInMilliseconds: 60000

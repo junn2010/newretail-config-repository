@@ -63,6 +63,22 @@ feign:
 newretail-distributeId: 
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+hystrix:
+  threadpool:
+    default:
+      coreSize: 3
+      maximumSize: 30
+      maxQueueSize: 500
+      queueSizeRejectionThreshold: 20
+    #hystrix的超时时间必须大于ribbon的超时时间
+    command:
+      default:
+        execution:
+          isolation:
+            thread:
+              timeoutInMilliseconds: 60000
+
 jwt:
   authUser:
     priKey: MIIBUwIBADANBgkqhkiG9w0BAQEFAASCAT0wggE5AgEAAkEAyI99tT8CeG6FnI7EgmwJxJD0W3Wom1RiK+r25xqGqUujYEtZXKxgI8P8XUrmfe2viEHQfGZ5bIxjkXDpA79yDQIDAQABAkBoFF7uIebMTL61wjkkXaCsC3VjySlYgm/3zpWW1OMxEw5lAR9mI0QTuxub3gNO/lfGk4GwhMsda7ofx4dO4dwZAiEA474dJ7IEhlKlIsDZ5SgxNx3FsUg9zWhnxXWEd1OOGscCIQDhcfrbAQhkoD65pK3UyAgkncP5eixZFHSmc/MDwgnYiwIgDxMcdu4vonyB9cTyJ1r7tvw/g7aWcKxCgi1/MS7Ury0CIDEi8pYBJ58m/gTgS7Lw1jWE3U3mvvu7ZaFR7EmJZTP5AiBxoS/bnXNCriCViNa71kM71+cLFwbLofDK1D8riBQYDA==
