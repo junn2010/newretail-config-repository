@@ -67,6 +67,13 @@ feign:
 newretail-distributeId: 
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+ribbon:
+  connectTimeout: 6000
+  readTimeout: 50000
+  maxAutoRetries: 1
+  maxAutoRetriesNextServer: 2
+  okToRetryOnAllOperations: true
 hystrix:
   threadpool:
     default:
